@@ -1,0 +1,5 @@
+env = Environment() # initialize the environment
+
+env.SharedLibrary(target = "chapter_one", source = ["chapter_one.cpp"], CPPPATH = ["."])
+
+env.Program(target = "chapter_one", source = ["main_chapter_one.cpp"], CPPPATH = ["."], LIBS= ["libchapter_one.so"], LIBPATH=["."], RPATH=[".", "./build"])
